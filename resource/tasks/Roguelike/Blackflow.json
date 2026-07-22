@@ -98,7 +98,8 @@
         "next": ["#next"]
     },
     "Blackflow@Roguelike@CloseCollectionClose": {
-        "baseTask": "Blackflow@Roguelike@CloseCollection"
+        "baseTask": "Blackflow@Roguelike@CloseCollection",
+        "template": "Blackflow@Roguelike@CloseCollection.png"
     },
     "Blackflow@Roguelike@CloseCollectionContinue": {
         "template": "Blackflow@Roguelike@CloseCollectionContinue.png",
