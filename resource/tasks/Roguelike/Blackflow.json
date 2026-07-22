@@ -313,6 +313,10 @@
     "Blackflow@Roguelike@RolesDefault": {
         "template": "Blackflow@Roguelike@RolesDefault.png"
     },
+    "Blackflow@RoguelikeCustom-HijackRoles": {
+        "baseTask": "RoguelikeCustom-HijackRoles",
+        "rectMove": [0, -120, 0, 0]
+    },
     "Blackflow@Roguelike@SelectTheme": {
         "text": ["沉沦者的黑流树海", "黑流树海", "沉沦于树海"]
     },

@@ -10,7 +10,7 @@
                     "alternate_skill": 2,
                     "is_key": true,
                     "is_start": true,
-                    "recruit_priority": 998,
+                    "recruit_priority": 999,
                     "promote_priority": 1000
                 }
             ]
@@ -48,7 +48,7 @@
                     "alternate_skill": 2,
                     "is_start": true,
                     "is_key": true,
-                    "recruit_priority": 999,
+                    "recruit_priority": 998,
                     "promote_priority": 999
                 }
             ]
@@ -60,7 +60,8 @@
                     "name": "酒神",
                     "skill": 2,
                     "is_key": true,
-                    "recruit_priority": 905,
+                    "is_start": true,
+                    "recruit_priority": 994,
                     "promote_priority": 950,
                     "recruit_priority_offsets": [
                         {
@@ -160,7 +161,7 @@
                     "name": "司霆惊蛰",
                     "skill": 2,
                     "is_key": true,
-                    "recruit_priority": 996,
+                    "recruit_priority": 900,
                     "promote_priority": 1000,
                     "recruit_priority_offsets": [
                         {
@@ -176,7 +177,7 @@
                     "skill": 3,
                     "alternate_skill": 2,
                     "is_key": true,
-                    "recruit_priority": 995,
+                    "recruit_priority": 899,
                     "promote_priority": 999,
                     "recruit_priority_offsets": [
                         {
@@ -229,7 +230,8 @@
                     "skill": 3,
                     "alternate_skill": 1,
                     "is_key": true,
-                    "recruit_priority": 900,
+                    "is_start": true,
+                    "recruit_priority": 996,
                     "promote_priority": 950,
                     "recruit_priority_offsets": [
                         {
@@ -283,7 +285,9 @@
                     "name": "赤刃明霄陈",
                     "skill": 3,
                     "alternate_skill": 1,
-                    "recruit_priority": 711,
+                    "is_key": true,
+                    "is_start": true,
+                    "recruit_priority": 991,
                     "promote_priority": 800,
                     "recruit_priority_offsets": [
                         {
@@ -516,7 +520,9 @@
                 {
                     "name": "贝洛内",
                     "skill": 2,
-                    "recruit_priority": 699,
+                    "is_key": true,
+                    "is_start": true,
+                    "recruit_priority": 992,
                     "promote_priority": 610,
                     "recruit_priority_offsets": [
                         {
@@ -1759,7 +1765,9 @@
                     "name": "麒麟R夜刀",
                     "skill": 2,
                     "auto_retreat": 6,
-                    "recruit_priority": 611,
+                    "is_key": true,
+                    "is_start": true,
+                    "recruit_priority": 988,
                     "promote_priority": 815,
                     "recruit_priority_offsets": [
                         {
@@ -1943,7 +1951,8 @@
                     "name": "凯尔希·思衡托",
                     "skill": 2,
                     "is_key": true,
-                    "recruit_priority": 748,
+                    "is_start": true,
+                    "recruit_priority": 990,
                     "promote_priority": 648,
                     "recruit_priority_offsets": [
                         {
@@ -2445,7 +2454,7 @@
                     "skill_usage": 0,
                     "is_key": true,
                     "is_start": true,
-                    "recruit_priority": 900,
+                    "recruit_priority": 995,
                     "promote_priority": 950
                 },
                 {
@@ -2692,7 +2701,7 @@
                     "skill": 2,
                     "is_key": true,
                     "is_start": true,
-                    "recruit_priority": 370,
+                    "recruit_priority": 993,
                     "promote_priority": 510,
                     "recruit_priority_offsets": [
                         {
@@ -2863,7 +2872,8 @@
                     "skill": 3,
                     "alternate_skill": 1,
                     "is_key": true,
-                    "recruit_priority": 526,
+                    "is_start": true,
+                    "recruit_priority": 989,
                     "promote_priority": 602
                 },
                 {

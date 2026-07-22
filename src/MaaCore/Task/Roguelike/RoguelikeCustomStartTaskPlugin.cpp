@@ -202,6 +202,7 @@ bool asst::RoguelikeCustomStartTaskPlugin::hijack_roles()
 {
     constexpr size_t SwipeTimes = 7;
     const std::string& required_role = m_customs[RoguelikeCustomType::Roles];
+    const std::string task_name = m_config->get_theme() + "@RoguelikeCustom-HijackRoles";
 
     for (size_t i = 0; i != SwipeTimes; ++i) {
         if (need_exit()) {
@@ -210,17 +211,20 @@ bool asst::RoguelikeCustomStartTaskPlugin::hijack_roles()
 
         auto image = ctrler()->get_image();
         OCRer analyzer(image);
-        analyzer.set_task_info("RoguelikeCustom-HijackRoles");
+        analyzer.set_task_info(task_name);
         analyzer.set_required({ required_role });
 
         if (analyzer.analyze()) {
-            const auto& rect = analyzer.get_result().front().rect;
+            auto rect = analyzer.get_result().front().rect;
+            const auto& click_offset = Task.get(task_name)->rect_move;
+            rect.x += click_offset.x;
+            rect.y += click_offset.y;
             ctrler()->click(rect);
             return true;
         }
 
         ProcessTask(*this, { "Roguelike@SquadSlowlySwipeToTheRight" }).run();
-        sleep(Task.get("RoguelikeCustom-HijackRoles")->post_delay);
+        sleep(Task.get(task_name)->post_delay);
     }
 
     ProcessTask(*this, { "SwipeToTheLeft" }).run();
