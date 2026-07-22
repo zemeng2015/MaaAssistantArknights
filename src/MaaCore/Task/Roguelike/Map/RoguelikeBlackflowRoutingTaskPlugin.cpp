@@ -303,8 +303,10 @@ RoguelikeBlackflowMapAnalyzer::Result RoguelikeBlackflowRoutingTaskPlugin::recog
 {
     // 1. 确保地图缩小：同一帧比较“＋”和“−”的置信率。
     //    游戏在最小缩放时仍会保留“−”按钮，因此不能以“−”消失作为退出条件。
-    //    最小缩放时“−”模板会产生约 0.95 的背景误匹配，真实按钮通常 >= 0.99。
-    constexpr double zoom_threshold = 0.99;
+    //    缩放按钮带有半透明背景，匹配分数会随地图底图变化，不能依赖接近 1.0 的固定阈值。
+    //    仅当“−”明显优于“＋”且高于安全下限时点击，避免把背景误匹配当成可缩小状态。
+    constexpr double zoom_threshold = 0.70;
+    constexpr double zoom_score_margin = 0.02;
     constexpr int zoom_max_clicks = 8;
     constexpr int zoom_wait_ms = 1000;
     constexpr double layer_reset_threshold = 0.8;
@@ -379,7 +381,7 @@ RoguelikeBlackflowMapAnalyzer::Result RoguelikeBlackflowRoutingTaskPlugin::recog
         const double zoom_out_score = zoom_out ? zoom_out->score : 0.0;
         Log.info(__FUNCTION__, "| zoom controls: in=", zoom_in_score, "out=", zoom_out_score);
 
-        if (zoom_in_score > zoom_out_score || !zoom_out || zoom_out_score < zoom_threshold) {
+        if (!zoom_out || zoom_out_score < zoom_threshold || zoom_out_score <= zoom_in_score + zoom_score_margin) {
             break;
         }
 

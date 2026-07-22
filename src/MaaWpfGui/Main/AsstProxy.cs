@@ -2699,6 +2699,17 @@ public class AsstProxy
 
             Instances.TaskQueueViewModel.AddLog(error, UiLogColor.Error);
         }
+        else if (Instances.TaskQueueViewModel.EnableAutoReload)
+        {
+            _logger.Information("Forced reload resource after attaching window");
+            if (!LoadResource())
+            {
+                error = "Load Resource Failed";
+                return false;
+            }
+
+            ToastNotification.ShowDirect("Auto Reload");
+        }
 
         return ret;
     }

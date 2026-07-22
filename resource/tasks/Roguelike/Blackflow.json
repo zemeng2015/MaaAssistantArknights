@@ -97,6 +97,9 @@
         "onErrorNext": ["#back"],
         "next": ["#next"]
     },
+    "Blackflow@Roguelike@CloseCollectionClose": {
+        "baseTask": "Blackflow@Roguelike@CloseCollection"
+    },
     "Blackflow@Roguelike@CloseCollectionContinue": {
         "template": "Blackflow@Roguelike@CloseCollectionContinue.png",
         "action": "ClickSelf",
